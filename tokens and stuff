@@ -1,0 +1,22 @@
+curl -X POST \
+  -d grant_type=authorization_code \
+  -d code=AQDBjgS56NDZt1EgJ_6__jsEOpEZb0wrp80Bqk3iJzC6TCaleUNGDST-rriNnAj-ocLDPmIIXg3YVZbDMG-gT63WElJch19hawF9o9gQTnRVktjvgdXgviRe1FAkVd972WB620vuTMIeTGKnPITQpIbqCB_TCa5dObAXA6DzCAtCJN5bo3A8LE89NrUvCopBTXEVSTg8_nIjYUvcMGths7aZspGZ_A-jw8vs93COy2klvyW4e3nEDh5a5TOnUCwLCFWwkAJ08p0uDNlfAm8cQBx_MSVUOBL2yVqvtE7FZBdDG6zaAgLu0CES1X_G1OFujhms0Ko9PoobsqGapNbtnyZboH2bP654OGL87h8My2twAj2JMnslzWVtPlhdBPTRUds9RTlGvr50SEJH0t3HXbI \
+  -d redirect_uri=https://postb.in/3Fc1KKoD \
+  -d client_id=fd5f1b4c923446d2b9af81459007f52f \
+  -d client_secret=33b326a69dde42a9bc4bbb8224a9f875 \
+  https://accounts.spotify.com/api/token
+
+
+https://accounts.spotify.com/authorize?client_id=fd5f1b4c923446d2b9af81459007f52f&redirect_uri=https://postb.in/3Fc1KKoD&response_type=code&scope=playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20playlist-modify-private%20user-library-read%20user-library-modify%20user-read-private
+
+
+
+playlist-read-private,
+playlist-read-collaborative,
+playlist-modify-public,
+playlist-modify-private,
+user-library-read,
+user-library-modify,
+user-read-private,
+
+polytunes import --from apple --to spotify --apple-library

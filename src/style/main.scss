@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
+
+body {
+	font: .9em 'Open Sans', sans-serif;
+	color: #333;
+}
+
+#matched-albums,
+#matchless-albums {
+	margin: 3em auto;
+	padding: 0 1.5em;
+	width: 1000px;
+}
+
+#done-wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.row {
+	box-sizing: border-box;
+	&:first-of-type {
+		border-top: 1px solid #888;
+	}
+	padding: .2em 1em .2em 1em;
+	border-bottom: 1px solid #888;
+	select {
+		-webkit-appearance: none;
+		padding: 2px 5px 2px 5px;
+		background: rgba(0, 0, 0, 0.05);
+		border: 2px solid rgba(0, 0, 0, 0.2);
+		border-radius: 0;
+		color: #333;
+		line-height: 20px;
+		&:hover {
+			cursor: pointer;
+			background: rgba(0, 0, 0, 0.075);
+		}
+	}
+	.cell {
+		line-height: 2em;
+	}
+	&.self-titled {
+		background-color: #cef2ff;
+		font-weight: bold;
+		select {
+			font-weight: bold;
+		}
+		&:hover {
+			background: #dff7ff;
+		}
+	}
+	&:hover {
+		background: rgba(255, 244, 0, 0.2);
+		.cell {
+			font-weight: bold;
+			white-space: normal;
+		}
+	}
+	&.disabled {
+		.cell,
+		.cell select {
+			text-decoration: line-through;
+		}
+		opacity: 0.6;
+		background: #ddd;
+	}
+	&.singleMatch {
+		display: none;
+	}
+}
+
+.button {
+	-webkit-appearance: none;
+	background: rgba(0, 0, 0, 0.05);
+	color: #333;
+	border: 2px solid rgba(0, 0, 0, 0.15);
+	margin-top: 2px;
+	margin-left: .4em;
+	line-height: 19px;
+	font-size: 1.3em;
+	&:hover {
+		cursor: pointer;
+		background: rgba(0, 0, 0, 0.4);
+		color: white;
+	}
+}
+
+.cell {
+	vertical-align: top;
+	display: inline-block;
+	width: 460px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	&.matches {
+		// padding-left: 17px;
+	}
+	select {
+		width: 450px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
